@@ -34,7 +34,7 @@ public record Jokenpo(
 
         Integer finalScoreUser = user.getScore();
         Integer finalScoreIA = IA.getScore();
-        System.out.println("\n\tPLACAR FINAL: " + user.getName() + " " + user.getScore() + " X " + IA.getScore() + " " + IA.getName());
+        System.out.println("\tPLACAR FINAL: " + user.getName() + " " + user.getScore() + " X " + IA.getScore() + " " + IA.getName());
 
         if(finalScoreUser == finalScoreIA){
             System.out.println("\t\t\tEMPATE!");
@@ -42,7 +42,7 @@ public record Jokenpo(
             String finalWinner = (finalScoreUser > finalScoreIA ) ? user.getName() : IA.getName();
             System.out.println("\t\tVENCEDOR = " + finalWinner.toUpperCase());
         }
-        System.out.println("\n******************************************\n");
+        System.out.println("******************************************");
     }
 
     private void winnerRound(int result) {
@@ -59,7 +59,7 @@ public record Jokenpo(
                 winnerRound = user().getName();
             }
         }
-        System.out.println("\nVENCEDOR DO ROUND: " + winnerRound + "\n");
+        System.out.println("\nVENCEDOR DO ROUND: " + winnerRound);
     }
 
 
